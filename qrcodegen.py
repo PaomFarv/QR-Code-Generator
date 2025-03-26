@@ -35,7 +35,9 @@ def qr_gen():
     qr_label.configure(image=qr_ctk_img)
     qr_label.image = qr_ctk_img
 
-    save_button.pack(pady=2)
+    gen_button.configure(text="Regenerate")
+
+    save_button.pack(pady=10)
 
 def save_btn():
     data = data_inp.get()
@@ -58,7 +60,7 @@ def save_btn():
 
 app = ctk.CTk()
 app.title("QR Code Generator")
-app.geometry("400x550")
+app.geometry("400x570")
 
 main_frame = ctk.CTkFrame(master=app,border_width=1,fg_color="#00a2ff")
 main_frame.pack(fill="x",pady=10,padx=10)
